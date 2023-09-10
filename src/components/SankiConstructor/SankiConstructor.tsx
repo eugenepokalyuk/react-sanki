@@ -3,7 +3,6 @@ import styles from './SankiConstructor.module.css';
 import { useAppSelector } from '../../services/hooks/redux';
 
 const SankiConstructor = () => {
-    const constructor = useAppSelector(state => state.constructor);
     const orders = useAppSelector(store => store.constructor)
     console.log('orders', orders)
     return (
