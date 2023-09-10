@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik:wght@400;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.section {
+    display: flex;
+    width: 100%;
+
+    color: #000;
+    background: #FFF;
+
+    margin-top: 16px;
+    border-radius: 32px;
+}
+
+.article {
+    /* padding: 48px 0px; */
+    border-radius: 32px;
+    width: 100%;
+}
+
+.articleHeader {
+    margin-right: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    padding: 32px 48px 0px 48px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cardItem {
+    display: flex;
+    align-items: center;
+    padding: 24px 48px;
+}
+
+.cardItem:nth-child(odd) {
+    background: transparent;
+}
+.cardItem:nth-child(even) {
+    background: rgba(196, 196, 196, 0.16);
+}
+
+.cardItem:first-child {
+    border-radius: 32px;
+}
+
+.cardItem:last-child {
+    border-radius: 32px;
+}
+
+.cardItem>div {}
+
+.itemImage {
+    max-width: 20%;
+}
+
+.itemDescription {
+    width: 40%;
+    margin-left: 20px;
+}
+
+.descriptionHeader {
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.descriptionText {
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.itemPrice {
+    max-width: 20%;
+    margin-left: auto;
+
+    color: #222;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.itemButton {
+    margin-left: 50px;
+    max-width: 20%;
+}
+
+.cardItem picture img {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+}
+
+.button {
+    display: inline-flex;
+    padding: 8px 16px 10px 16px;
+    align-items: flex-start;
+    gap: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+    background: #00A3FF;
+    color: #fff;
+
+    color: #FFF;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.button:hover {
+    background: #0090e3;
+    cursor: pointer;
+}

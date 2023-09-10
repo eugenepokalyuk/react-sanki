@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.section {
+    max-width: 880px;
+    border-radius: 32px;
+    background: linear-gradient(254deg, #ED2D72 0%, #FE5B00 100%);
+    padding: 48px;
+    color: #fff;
+
+    display: flex;
+    width: 100%;
+    /* min-height: 510px; */
+}
+
+.frontForward {
+    z-index: 1;
+}
+
+.width1n2 {
+    width: 50%;
+    flex: 0 0 50%;
+}
+
+.width70 {
+    width: 70%;
+    flex: 0 0 70%;
+}
+
+.width30 {
+    width: 30%;
+    flex: 0 0 30%;
+}
+
+.imageContainer {
+    border-radius: 100%;
+}
+
+.card {
+    max-width: 458px;
+    display: flex;
+
+    color: #FFF;
+    font-family: Open Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.mb6 {
+    margin-bottom: 24px;
+}
+
+.cardHeader {
+    margin-right: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.cardItem {
+    margin-right: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.fontSizeLarge {
+    font-size: 64px;
+    line-height: 62px;
+}
+
+.fontColorTransparent {
+    background: white;
+    color: #FE5B00;
+    border-radius: 100%;
+    padding: 8px 16px;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
