@@ -27,19 +27,17 @@ const App = () => {
       .catch(error => {
         dispatch({ type: FETCH_MENU_FAILURE, payload: error });
       });
-  }, [dispatch])
 
-  useEffect(() => {
-    dispatch({ type: FETCH_INGREDIENTS_REQUEST });
-    isLoading(true);
-
-    fetchIngredientsData()
-      .then(res => {
-        dispatch({ type: FETCH_INGREDIENTS_SUCCESS, payload: res });
-      })
-      .catch(error => {
-        dispatch({ type: FETCH_INGREDIENTS_FAILURE, payload: error });
-      });
+      dispatch({ type: FETCH_INGREDIENTS_REQUEST });
+      isLoading(true);
+  
+      fetchIngredientsData()
+        .then(res => {
+          dispatch({ type: FETCH_INGREDIENTS_SUCCESS, payload: res });
+        })
+        .catch(error => {
+          dispatch({ type: FETCH_INGREDIENTS_FAILURE, payload: error });
+        });
   }, [dispatch])
 
   return (

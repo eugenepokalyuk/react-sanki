@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
 
 .section {
-    /* max-width: 280px; */
-    /* width: 100%; */
     border-radius: 32px;
     background: #ccc;
     padding: 48px;
@@ -13,7 +11,6 @@
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.04);
 
-    /* height: 1080px; */
     min-height: 510px;
 }
 
@@ -25,7 +22,22 @@
     font-weight: 800;
     line-height: 32px;
     text-transform: uppercase;
+}
+.cardHeader2 {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.colorGray {
     color: rgba(255, 255, 255, 0.32);
+}
+.colorWhite {
+    color: #fff;
 }
 
 .article {
@@ -80,4 +92,69 @@
 .button:hover {
     cursor: pointer;
     background: #297731;
+}
+
+.card {
+    width: 100%;
+}
+
+.cardFlex {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px;
+}
+
+.cardItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+    padding: 20px 0px;
+
+    border-bottom: 1px solid #999;
+}
+
+.cardItem:last-child {
+    border: none;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 170px;
+}
+
+.itemName {
+    color: #FFF;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.itemDescription {
+    color: #999;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.itemPrice {
+    color: #FFF;
+    text-align: right;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    margin-left: auto;
+}
+
+.fontSizeSmall {
+    font-size: 80%;
 }

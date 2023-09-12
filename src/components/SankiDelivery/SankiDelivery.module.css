@@ -45,6 +45,8 @@
 
 .imageContainer {
     border-radius: 100%;
+    position: absolute;
+    left: 45%;
 }
 
 .card {

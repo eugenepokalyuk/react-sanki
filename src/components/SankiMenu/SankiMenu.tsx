@@ -22,7 +22,7 @@ const SankiMenu = () => {
                             <h2 className={styles.articleHeader}>{menuItem.header}, {menuItem.id} Февраля</h2>
                             <ul className={styles.card}>
                                 {ingredientsForMenu.map((ingredient: any) => (
-                                    <SankiMenuItem key={uuidv4()} ingredient={ingredient} />
+                                    <SankiMenuItem key={uuidv4()} ingredient={ingredient} menuItem={menuItem} />
                                 ))}
                             </ul>
                         </article>
