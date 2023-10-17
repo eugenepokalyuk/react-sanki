@@ -16,29 +16,34 @@ const App = () => {
   const [loading, isLoading] = useState<boolean>(Boolean);
 
 
+  // useEffect(() => {
+  //   dispatch({ type: FETCH_MENU_REQUEST });
+  //   isLoading(true);
+
+  //   fetchMenuData()
+  //     .then(res => {
+  //       dispatch({ type: FETCH_MENU_SUCCESS, payload: res });
+  //     })
+  //     .catch(error => {
+  //       dispatch({ type: FETCH_MENU_FAILURE, payload: error });
+  //     });
+
+  //     dispatch({ type: FETCH_INGREDIENTS_REQUEST });
+  //     isLoading(true);
+
+  //     fetchIngredientsData()
+  //       .then(res => {
+  //         dispatch({ type: FETCH_INGREDIENTS_SUCCESS, payload: res });
+  //       })
+  //       .catch(error => {
+  //         dispatch({ type: FETCH_INGREDIENTS_FAILURE, payload: error });
+  //       });
+  // }, [dispatch])
+
   useEffect(() => {
-    dispatch({ type: FETCH_MENU_REQUEST });
-    isLoading(true);
-
-    fetchMenuData()
-      .then(res => {
-        dispatch({ type: FETCH_MENU_SUCCESS, payload: res });
-      })
-      .catch(error => {
-        dispatch({ type: FETCH_MENU_FAILURE, payload: error });
-      });
-
-      dispatch({ type: FETCH_INGREDIENTS_REQUEST });
-      isLoading(true);
-  
-      fetchIngredientsData()
-        .then(res => {
-          dispatch({ type: FETCH_INGREDIENTS_SUCCESS, payload: res });
-        })
-        .catch(error => {
-          dispatch({ type: FETCH_INGREDIENTS_FAILURE, payload: error });
-        });
-  }, [dispatch])
+    dispatch({ type: FETCH_MENU_SUCCESS, payload: fetchMenuData() });
+    dispatch({ type: FETCH_INGREDIENTS_SUCCESS, payload: fetchIngredientsData() });
+  })
 
   return (
     <>

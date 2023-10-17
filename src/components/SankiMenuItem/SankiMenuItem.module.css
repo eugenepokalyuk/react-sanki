@@ -19,7 +19,6 @@
 }
 
 .article {
-    /* padding: 48px 0px; */
     border-radius: 32px;
     width: 100%;
 }
@@ -61,8 +60,6 @@
 .cardItem:last-child {
     border-radius: 32px;
 }
-
-.cardItem>div {}
 
 .itemImage {
     max-width: 20%;
@@ -113,6 +110,7 @@
     width: 120px;
     height: 120px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .button {
