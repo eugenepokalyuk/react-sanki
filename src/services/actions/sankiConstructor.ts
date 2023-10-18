@@ -8,7 +8,7 @@ export const addIngredient = (ingredient: any, dayOfTheWeek: any) => ({
   payload: {
     ...ingredient,
     dayOfTheWeek,
-    uuid: uuidv4(), // Assign a UUID to the ingredient
+    uuid: uuidv4(),
   },
 });
 

@@ -118,3 +118,19 @@ export const fetchIngredientsData = () => {
         price: 425
     }]
 }
+
+
+export const fetchCreateOrder = (address: string) => {
+    if (address === "0") {
+        return {
+            success: false,
+            address: address
+        }
+    } else {
+        return {
+            success: true,
+            address: address
+        }
+    }
+
+}

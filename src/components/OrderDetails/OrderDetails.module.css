@@ -1,0 +1,87 @@
+.container {
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+    height: 90vh;
+    padding: 0vh 3vh;
+}
+
+.containerDefault {
+    background: linear-gradient(254deg, #ED2D72 0%, #FE5B00 100%);
+}
+
+.containerSecondary {
+    background: #ffffff14;
+}
+
+.article {
+    padding: 5vh 0vh;
+}
+.buttonSendTelegram {
+    width: 90%;
+    height: 56px;
+    flex-shrink: 0;
+
+    background: #00A3FF;
+
+    border-radius: 1vh;
+
+    position: fixed;
+    bottom: 0%;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonSendTelegram div {
+    padding: 20px;
+}
+
+.buttonBackToMenu {
+    width: 90%;
+    height: 56px;
+    flex-shrink: 0;
+
+    background: #00A3FF;
+
+    border-radius: 1vh;
+
+    position: fixed;
+    bottom: 0%;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonBackToMenu div {
+    padding: 20px;
+}
+
+.buttonBackToMenu {
+    background: #fff;
+}
+
+.buttonBackToMenu p {
+    color: #00A3FF;
+}
+
+.buttonContainer {
+    width: 90%;
+    height: 56px;
+    flex-shrink: 0;
+
+    border-radius: 1vh;
+
+    position: fixed;
+    bottom: 0%;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonContainer div {
+    padding: 20px;
+}
+
+.buttonContainer {
+    background: #00A3FF;
+}

@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import styles from './SankiMenuItem.module.css';
-import { useAppDispatch, useAppSelector } from '../../services/hooks/redux';
+import { useAppDispatch, useAppSelector } from '../../services/hooks/useDispatch';
 import { addIngredient, removeIngredient } from '../../services/actions/sankiConstructor';
+import { useMediaQuery } from 'react-responsive';
 
 type Props = {
     ingredient: any;
@@ -9,6 +10,9 @@ type Props = {
 };
 
 const SankiMenuItem: FC<Props> = ({ ingredient, menuItem }) => {
+    const isDesktop = useMediaQuery({ minWidth: 961 });
+    const isMobile = useMediaQuery({ maxWidth: 450 });
+
     const dispatch = useAppDispatch();
     const selectedIngredients = useAppSelector((store: any) => store.selectedIngredients.selectedIngredients);
     const cartItemCount = selectedIngredients.filter((item: any) => item.id === ingredient.id && item.dayOfTheWeek === menuItem.header).length;
@@ -23,35 +27,46 @@ const SankiMenuItem: FC<Props> = ({ ingredient, menuItem }) => {
             dispatch(removeIngredient(existingIngredient.uuid, menuItem.header));
         }
     };
-    return (
-        <li className={styles.cardItem} key={ingredient.id}>
-            <div className={styles.itemImage}>
-                <picture>
+
+    const DesktopView = () => (
+        <></>
+    )
+    const MobileView = () => (
+        <li className={`${styles.card} mb-5`} key={ingredient.id}>
+            <div className={`${styles.cardItem}`}>
+                <div className='w-80'>
+                    <p>{ingredient.name}</p>
+                    <p className='textColorSecondary fs-2 mt-1'>{ingredient.ingredients}</p>
+                </div>
+
+                <div className='flex flexAlignCenter mt-2'>
+                    {cartItemCount > 0 ? (
+                        <div className='w-30 flex flexAlignCenter flexBetween'>
+                            <button className={`${styles.buttonIncrement} textColorWhite`} onClick={handleRemoveIngredient}>-</button>
+                            <span className='textDefaultBold'>{cartItemCount}</span>
+                            <button className={`${styles.buttonIncrement} textColorWhite`} onClick={handleAddIngredient}>+</button>
+                        </div>
+                    ) : (
+                        <button className='w-30 buttonDefault textColorWhite' onClick={handleAddIngredient}>Добавить</button>
+                    )}
+
+                    <p className='ml-3 textDefaultBold'>{ingredient.price} р.</p>
+                </div>
+            </div>
+
+            <div className={`${styles.cardItem}`}>
+                <picture className={`${styles.picture}`}>
                     <img src={ingredient.image} alt="" />
                 </picture>
             </div>
-
-            <div className={styles.itemDescription}>
-                <p className={styles.descriptionHeader}>{ingredient.name}</p>
-                <p className={styles.descriptionText}>{ingredient.ingredients}</p>
-            </div>
-
-            <div className={styles.itemPrice}>
-                <p>{ingredient.price} р.</p>
-            </div>
-
-            <div className={styles.itemButton}>
-                {cartItemCount > 0 ? (
-                    <>
-                        <button className={styles.button} onClick={handleRemoveIngredient}>-</button>
-                        <span>{cartItemCount}</span>
-                        <button className={styles.button} onClick={handleAddIngredient}>+</button>
-                    </>
-                ) : (
-                    <button className={styles.button} onClick={handleAddIngredient}>Добавить</button>
-                )}
-            </div>
         </li>
+    )
+
+    return (
+        <>
+            {isDesktop && DesktopView()}
+            {isMobile && MobileView()}
+        </>
     );
 };
 

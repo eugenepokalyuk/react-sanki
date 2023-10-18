@@ -1,102 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
-}
-
-.wrapper {
-    display: flex;
-    gap: 20px;
-}
-
-.section {
-    max-width: 880px;
-    border-radius: 32px;
-    background: linear-gradient(254deg, #ED2D72 0%, #FE5B00 100%);
-    padding: 48px;
-    color: #fff;
-
-    display: flex;
-    width: 100%;
-    /* min-height: 510px; */
-}
-
-.frontForward {
-    z-index: 1;
-}
-
-.width1n2 {
-    width: 50%;
-    flex: 0 0 50%;
-}
-
-.width70 {
-    width: 70%;
-    flex: 0 0 70%;
-}
-
-.width30 {
-    width: 30%;
-    flex: 0 0 30%;
-}
-
-.imageContainer {
-    border-radius: 100%;
-    position: absolute;
-    left: 45%;
-}
-
 .card {
-    max-width: 458px;
-    display: flex;
-
-    color: #FFF;
-    font-family: Open Sans;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
+    border-radius: 2vh;
+    background: linear-gradient(254deg, #ED2D72 0%, #FE5B00 100%);
+    min-height: 60vh;
+    max-height: 60vh;
+    padding: 5vh 3vh;
 }
 
-.mb6 {
-    margin-bottom: 24px;
-}
+.circleNubmer {
+    width: 5vh;
+    height: 5vh;
 
-.cardHeader {
-    margin-right: 16px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 32px;
-    text-transform: uppercase;
-}
+    min-width: 35px;
+    min-height: 35px;
 
-.cardItem {
-    margin-right: 16px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-}
-
-.fontSizeLarge {
-    font-size: 64px;
-    line-height: 62px;
-}
-
-.fontColorTransparent {
-    background: white;
-    color: #FE5B00;
-    border-radius: 100%;
-    padding: 8px 16px;
-    width: 40px;
-    height: 40px;
+    background: #fff;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 100%;
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 3vh;
+    font-weight: 800;
+
+    color: #FD5C09;
+}
+
+.cardList {
+    padding: 0px 3vh;
+    gap: 3vh;
+    margin-top: 3vh;
+}
+
+.card .picture {
+    display: flex;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+
+}
+
+.card .picture img {
+    border-radius: 100%;
+
+
+    /* margin: 0 auto; */
+    /* width: 200px; */
+    /* height: 200px; */
+    /* width: 100%; */
+    /* border-radius: 100%; */
 }

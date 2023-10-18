@@ -1,36 +1,36 @@
 import {
-    FETCH_MENU_REQUEST,
-    FETCH_MENU_SUCCESS,
-    FETCH_MENU_FAILURE
-} from "../actions/sankiMenu";
+    FETCH_CREATE_ORDER_REQUEST,
+    FETCH_CREATE_ORDER_SUCCESS,
+    FETCH_CREATE_ORDER_FAILURE
+} from "../actions/sankiOrder";
 // import { ActionTypes } from "../types/ingredients/ActionTypes";
 // import { IIngredientsState, RootState } from "../types/types";
 
 const initialState: any /* IIngredientsState */ = {
-    menu: [],
+    response: [],
     loading: false,
     error: null,
 };
 
-export const menuReducer = (
+export const orderReducer = (
     state = initialState,
     action: any // ActionTypes
 ) => {
     switch (action.type) {
-        case FETCH_MENU_REQUEST:
+        case FETCH_CREATE_ORDER_REQUEST:
             return {
                 ...state,
                 loading: true,
                 error: null,
             };
-        case FETCH_MENU_SUCCESS:
+        case FETCH_CREATE_ORDER_SUCCESS:
             return {
                 ...state,
-                menu: action.payload,
+                response: action.payload,
                 loading: false,
                 error: null,
             };
-        case FETCH_MENU_FAILURE:
+        case FETCH_CREATE_ORDER_FAILURE:
             return {
                 ...state,
                 loading: false,

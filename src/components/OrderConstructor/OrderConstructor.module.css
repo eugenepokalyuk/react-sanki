@@ -1,0 +1,57 @@
+.container {
+    padding: 0vh 3vh;
+}
+
+.card {
+    border-radius: 1vh;
+
+    padding: 2vh 3vh;
+    gap: 3vh;
+}
+
+.card .textarea {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 2vh 3vh;
+    border-radius: 1vh;
+    min-height: 25vh;
+}
+
+.textarea::placeholder {
+    color: #2222223d;
+}
+
+.cardGradient {
+    background: linear-gradient(269deg, #F90 0%, #FFD600 100%);
+}
+
+.warningElement {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+
+    border-radius: 1vh;
+    background: #EB001B;
+
+    font-weight: 800;
+}
+
+.ShoppingCartButton {
+    width: 90%;
+    height: 56px;
+    flex-shrink: 0;
+
+    background: #3BAA46;
+
+    border-radius: 1vh;
+
+    position: fixed;
+    bottom: 0%;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ShoppingCartButton {
+    padding: 20px;
+}
